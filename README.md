@@ -1,1 +1,1 @@
-# devops-final-assessment
+# devops-intern-final-assessment
