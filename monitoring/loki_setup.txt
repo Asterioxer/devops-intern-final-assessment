@@ -1,0 +1,17 @@
+Grafana Loki Setup (Local)
+
+1. Loki was started using Docker in single-binary mode:
+
+docker run -d \
+  --name loki \
+  -p 3100:3100 \
+  grafana/loki:2.9.3 \
+  -config.file=/etc/loki/local-config.yaml
+
+2. Loki runs on port 3100:
+http://localhost:3100
+
+3. Container logs (stdout/stderr) from Docker/Nomad workloads can be forwarded to Loki.
+
+4. This setup demonstrates basic log aggregation and monitoring awareness
+using Grafana Loki in a local DevOps workflow.
