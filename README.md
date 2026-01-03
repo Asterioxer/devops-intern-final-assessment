@@ -34,4 +34,16 @@ Project Workflow :
 -> Created a .github/workflows/ci.yml file in the repo and committed the changes.
 -> Added hello.py file to the .github/workflows/ci.yml file and committed the changes.
 -> Pushed the changes to GitHub.
--> Created a GitHub Actions workflow to run hello.py: [![Python CI](https://github.com/Asterioxer/devops-intern-final-assessment/actions/workflows/ci.yml/badge.svg)](https://github.com/Asterioxer/devops-intern-final-assessment/actions/workflows/ci.yml)
+-> Created a GitHub Actions workflow to run hello.py
+
+5. Nomad:
+-> Created a nomad directory in the repo and committed the changes.
+-> Added hello.nomad file to the nomad directory and committed the changes.
+-> Pushed the changes to GitHub.
+-> Created a Nomad job to run hello.nomad
+
+6. Monitoring:
+-> Created a monitoring directory in the repo and committed the changes.
+-> Added loki_setup.txt file to the monitoring directory and committed the changes.
+-> Pushed the changes to GitHub.
+-> Created a Grafana Loki setup to run loki_setup.txt
