@@ -9,7 +9,7 @@ Project Description : Build and document a DevOps workflow using open-source too
 This must ensure that a complete, realistic pipeline is built.
 
 ### Project Workflow :
-1. Git and GitHub:
+## 1. Git and GitHub:
 
 -> Created a repo called "devops-intern-final-assessment" on GitHub and cloned it to my local machine.
 -> Added a README.md file to the repo and committed the changes.
@@ -49,4 +49,5 @@ This must ensure that a complete, realistic pipeline is built.
 -> Created a Grafana Loki setup to run loki_setup.txt
 
 # Project complete with the python CI passing 
+
 
