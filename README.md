@@ -3,8 +3,7 @@
 [![Python CI](https://github.com/Asterioxer/devops-intern-final-assessment/actions/workflows/ci.yml/badge.svg)](https://github.com/Asterioxer/devops-intern-final-assessment/actions/workflows/ci.yml)
 
 Name : Soham Mukherjee
-
-Date : 03/01/2026
+Date : 05/01/2026
 
 Project Description : Build and document a DevOps workflow using open-source tools (Linux, GitHub, Docker, CI/CD, Nomad, monitoring).
 This must ensure that a complete, realistic pipeline is built.
@@ -46,4 +45,7 @@ Project Workflow :
 -> Created a monitoring directory in the repo and committed the changes.
 -> Added loki_setup.txt file to the monitoring directory and committed the changes.
 -> Pushed the changes to GitHub.
+
 -> Created a Grafana Loki setup to run loki_setup.txt
+
+# Project complete with the python CI passing 
