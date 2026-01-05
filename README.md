@@ -8,7 +8,7 @@ Date : 05/01/2026
 Project Description : Build and document a DevOps workflow using open-source tools (Linux, GitHub, Docker, CI/CD, Nomad, monitoring).
 This must ensure that a complete, realistic pipeline is built.
 
-Project Workflow :
+### Project Workflow :
 1. Git and GitHub:
 
 -> Created a repo called "devops-intern-final-assessment" on GitHub and cloned it to my local machine.
@@ -49,3 +49,4 @@ Project Workflow :
 -> Created a Grafana Loki setup to run loki_setup.txt
 
 # Project complete with the python CI passing 
+
