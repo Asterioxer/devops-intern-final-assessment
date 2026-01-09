@@ -3,7 +3,7 @@
 [![Python CI](https://github.com/Asterioxer/devops-intern-final-assessment/actions/workflows/ci.yml/badge.svg)](https://github.com/Asterioxer/devops-intern-final-assessment/actions/workflows/ci.yml)
 
 **Name:** Soham Mukherjee  
-**Date:** 03 January 2026  
+**Date:** 09 January 2026  
 
 ---
 
@@ -190,3 +190,4 @@ Logs are ingested into Loki
 Logs are queryable and inspectable
 
 Observability flow is correctly understood
+
