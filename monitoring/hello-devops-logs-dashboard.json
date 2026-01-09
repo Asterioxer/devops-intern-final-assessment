@@ -1,0 +1,47 @@
+{
+    "uid": "hello-devops-logs",
+    "title": "Hello DevOps – Batch Job Logs",
+    "timezone": "browser",
+    "schemaVersion": 39,
+    "version": 1,
+    "refresh": "10s",
+    "panels": [
+        {
+            "id": 1,
+            "type": "logs",
+            "title": "Hello DevOps Application Logs",
+            "gridPos": {
+                "h": 16,
+                "w": 24,
+                "x": 0,
+                "y": 0
+            },
+            "datasource": {
+                "type": "loki",
+                "uid": "LOKI_DS_UID"
+            },
+            "targets": [
+                {
+                    "refId": "A",
+                    "expr": "{job=\"docker\"} |= \"Hello, DevOps\""
+                }
+            ],
+            "options": {
+                "showTime": true,
+                "showLabels": true,
+                "wrapLogMessage": true,
+                "sortOrder": "Descending"
+            }
+        }
+    ],
+    "time": {
+        "from": "now-1h",
+        "to": "now"
+    },
+    "templating": {
+        "list": []
+    },
+    "annotations": {
+        "list": []
+    }
+}

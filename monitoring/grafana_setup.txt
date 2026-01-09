@@ -1,0 +1,27 @@
+Grafana Visualization Add-on
+
+Purpose:
+--------
+Provide visual inspection of logs emitted by Nomad batch jobs.
+
+Components:
+-----------
+- Loki: log storage
+- Promtail: log shipping from Docker
+- Grafana: visualization
+
+Why Grafana is included:
+------------------------
+While batch jobs do not require dashboards, Grafana enables:
+- Log verification
+- Debugging failed runs
+- Demonstration of log flow understanding
+
+Example Query:
+--------------
+{job="docker"} |= "Hello, DevOps"
+
+This confirms:
+- Container stdout is captured
+- Logs are ingested into Loki
+- Logs are queryable via Grafana

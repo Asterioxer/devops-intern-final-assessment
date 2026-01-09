@@ -2,11 +2,11 @@ name: Python CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+  pull_request:
 
 jobs:
-  run-hello:
+  quality-checks:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,5 +18,15 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Run hello.py
-        run: python hello.py
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest flake8
+
+      - name: Lint with flake8
+        run: |
+          flake8 hello.py
+
+      - name: Run tests
+        run: |
+          pytest -v

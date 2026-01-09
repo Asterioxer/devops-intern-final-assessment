@@ -1,17 +1,54 @@
-Grafana Loki Setup (Local)
+Loki Monitoring Setup (Conceptual + Practical)
 
-1. Loki was started using Docker in single-binary mode:
+Purpose:
+--------
+Collect and store logs emitted by Nomad batch jobs for debugging and auditing.
 
-docker run -d \
-  --name loki \
-  -p 3100:3100 \
-  grafana/loki:2.9.3 \
-  -config.file=/etc/loki/local-config.yaml
+Architecture:
+-------------
+Nomad Task (stdout/stderr)
+        ↓
+Docker logging driver (json-file)
+        ↓
+Promtail (or Docker log scraper)
+        ↓
+Loki
+        ↓
+Grafana (query & visualization)
 
-2. Loki runs on port 3100:
-http://localhost:3100
+What is monitored:
+------------------
+- Application stdout (Hello, DevOps message)
+- Application stderr (failures)
+- Nomad allocation logs
 
-3. Container logs (stdout/stderr) from Docker/Nomad workloads can be forwarded to Loki.
+Why this works for batch jobs:
+------------------------------
+Batch jobs emit finite logs and exit.
+Loki is ideal for log aggregation without requiring long-lived services.
 
-4. This setup demonstrates basic log aggregation and monitoring awareness
-using Grafana Loki in a local DevOps workflow.
+Basic Loki Verification:
+------------------------
+1. Start Loki:
+   docker run -d -p 3100:3100 grafana/loki:2.9.3
+
+2. Verify readiness:
+   curl http://localhost:3100/ready
+
+Expected:
+---------
+HTTP 200 when Loki is ready.
+
+Notes:
+------
+In a production setup, Promtail would be configured to scrape:
+- /var/lib/docker/containers/*/*.log
+- Nomad allocation log directories
+
+This project focuses on log flow understanding rather than full Grafana dashboards.
+
+Note:
+-----
+On Docker Desktop (Windows), container log files are not directly accessible
+to Promtail. To demonstrate log ingestion, Docker's Loki logging driver
+was used to push logs directly to Loki.
