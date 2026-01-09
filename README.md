@@ -46,4 +46,5 @@ Project Workflow :
 -> Created a monitoring directory in the repo and committed the changes.
 -> Added loki_setup.txt file to the monitoring directory and committed the changes.
 -> Pushed the changes to GitHub.
+
 -> Created a Grafana Loki setup to run loki_setup.txt
